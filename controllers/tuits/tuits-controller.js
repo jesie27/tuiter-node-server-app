@@ -3,6 +3,14 @@ import * as tuitsDao from "./tuits-dao.js"
 
 const createTuit = async (req, res) => {
     const newTuit = req.body;
+    newTuit.username = "Nola";
+    newTuit.handle = "Nolathecorgi";
+    newTuit.time = "3h";
+    newTuit.comments = 100;
+    newTuit.dislikes = 0;
+    newTuit.retuits = 0;
+    newTuit.disliked = false;
+    newTuit.image = "../images/corgibench.jpg"
     newTuit.likes = 0;
     newTuit.liked = false;
     const insertedTuit = await tuitsDao
